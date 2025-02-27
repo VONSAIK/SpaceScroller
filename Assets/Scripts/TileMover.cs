@@ -7,7 +7,7 @@ public class TileMover : MonoBehaviour
     [SerializeField] private List<TileData> _tiles;
     [SerializeField] private float _speed;
 
-    [SerializeField] bool _onMove = true;
+    [SerializeField] private bool _onMove = true;
 
     private void Update()
     {
