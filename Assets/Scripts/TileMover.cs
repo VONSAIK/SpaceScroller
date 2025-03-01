@@ -2,7 +2,7 @@ using NUnit.Framework;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TileMover : MonoBehaviour
+public class TileMover : MonoBehaviour, IService
 {
     [SerializeField] private List<TileData> _tiles;
     [SerializeField] private float _speed;
