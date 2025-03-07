@@ -18,3 +18,4 @@ public class ServiceLocatorLoaderGameScene : MonoBehaviour
         ServiceLocator.Current.Register<Player>(_player);
     }
 }
+
