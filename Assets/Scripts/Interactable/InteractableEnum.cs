@@ -1,8 +1,10 @@
-public enum Interactables
+using UnityEngine;
+
+public enum InteractableEnum 
 {
     UNDEFINE,
     ROCK,
     COIN,
-    HEALTKIT,
-    SHIELDKIT
+    HEALTH_KIT,
+    SHIELD_KIT
 }
