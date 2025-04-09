@@ -6,8 +6,8 @@ public class PlayerMovement : MonoBehaviour
 {
     [SerializeField] private float _speedMovement;
 
-    [SerializeField] private float mixX = -2.5f;
-    [SerializeField] private float maxX = 2.5f;
+    [SerializeField] private float minX;
+    [SerializeField] private float maxX;
 
     private Vector2 moveInput;
 
@@ -15,7 +15,7 @@ public class PlayerMovement : MonoBehaviour
     private void Update()
     {
         Vector3 newPosition = transform.position + Vector3.right * moveInput.x * _speedMovement * Time.deltaTime;
-        newPosition.x = Mathf.Clamp(newPosition.x, mixX, maxX);
+        newPosition.x = Mathf.Clamp(newPosition.x, minX, maxX);
 
         transform.position = newPosition;
 

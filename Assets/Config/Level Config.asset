@@ -12,10 +12,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc8d2b2060536f84b803d2a717a5906d, type: 3}
   m_Name: Level Config
   m_EditorClassIdentifier: 
+  _levelLength: 60
+  _speedStart: 3
+  _speedEnd: 4
   _interactableData:
-  - _prefab: {fileID: 4040561936031837531, guid: dbb81e9ce12c0574ea03a8d8e435f931, type: 3}
+  - _prefab: {fileID: 72794186971440675, guid: dbb81e9ce12c0574ea03a8d8e435f931, type: 3}
     _interactableType: 1
-    _speedStart: 3
-    _speedEnd: 4
-    _spawnCooldownStart: 0
-    _spawnCooldownEnd: 0
+    _spawnCooldownStart: 8
+    _spawnCooldownEnd: 6
+  - _prefab: {fileID: 5042984919615165366, guid: efe18a0c13caefb4d891d1a5d328eaca, type: 3}
+    _interactableType: 2
+    _spawnCooldownStart: 15
+    _spawnCooldownEnd: 13
+  - _prefab: {fileID: 1455496263839969815, guid: 471c04d3fb6466b4dabd1c9efc6633d5, type: 3}
+    _interactableType: 3
+    _spawnCooldownStart: 30
+    _spawnCooldownEnd: 25
+  - _prefab: {fileID: 7110579443635853483, guid: 196d77dd2c9ac97419d3450790ccfd14, type: 3}
+    _interactableType: 4
+    _spawnCooldownStart: 40
+    _spawnCooldownEnd: 35

@@ -1,21 +1,17 @@
 using UnityEngine;
+using CustomEventBus;
+using CustomEventBus.Signals;
 
 public abstract class Interactable : MonoBehaviour
 {
     private const string PLAYER_TAG = "Player";
 
-    [SerializeField] protected float _speedInterable;
-    [SerializeField] protected bool _onMove;
-
+    protected EventBus _eventBus;
     protected abstract void Interact();
 
-    protected virtual void Move()
+    protected void Start()
     {
-        if (!_onMove)
-        {
-            return;
-        }
-        gameObject.transform.Translate(Vector3.down * Time.deltaTime * _speedInterable);
+        _eventBus = ServiceLocator.Current.Get<EventBus>();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -23,9 +19,16 @@ public abstract class Interactable : MonoBehaviour
         if (collision.gameObject.tag.Equals(PLAYER_TAG))
         {
             Interact();
-            Destroy(gameObject);
+            Dispose();
         }
     }
+
+    private void Dispose()
+    {
+        _eventBus.Invoke(new DisposeInteractableSignal(this));
+    }
+
+    
 
 
 }

@@ -134,8 +134,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59d34bbee26b7f5419b81699f57f3543, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _speedInterable: 2
-  _onMove: 1
 --- !u!50 &4501264167922586949
 Rigidbody2D:
   serializedVersion: 5
@@ -193,7 +191,7 @@ CapsuleCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0

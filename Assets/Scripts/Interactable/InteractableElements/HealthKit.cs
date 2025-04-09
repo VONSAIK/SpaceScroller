@@ -6,14 +6,4 @@ public class HealthKit : Interactable
     {
         Debug.Log("Take health");
     }
-
-    private void Update()
-    {
-        Move();
-    }
-
-    protected override void Move()
-    {
-        base.Move();
-    }
 }

@@ -1,13 +1,34 @@
 using NUnit.Framework;
 using System.Collections.Generic;
 using UnityEngine;
+using CustomEventBus;
+using CustomEventBus.Signals;
 
 public class TileMover : MonoBehaviour, IService
 {
     [SerializeField] private List<TileData> _tiles;
     [SerializeField] private float _speed;
 
-    [SerializeField] private bool _onMove = true;
+    [SerializeField] private bool _onMove;
+
+    private EventBus _eventBus;
+
+    public void Init()
+    {
+        _eventBus = ServiceLocator.Current.Get<EventBus>();
+
+        _eventBus.Subscride<GameStartSignal>(OnGameStart);
+        _eventBus.Subscride<GameStopSignal>(OnGameStop);
+    }
+
+    private void OnGameStart(GameStartSignal signal)
+    {
+        _onMove = true;
+    }
+    private void OnGameStop(GameStopSignal signal)
+    {
+        _onMove = false;
+    }
 
     private void Update()
     {

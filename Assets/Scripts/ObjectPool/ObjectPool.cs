@@ -16,6 +16,7 @@ public class ObjectPool<T> where T : MonoBehaviour
         for (int i = 0; i < preparedObjects; i++)
         {
             var obj = GameObject.Instantiate(_prefab);
+
             obj.gameObject.SetActive(false);
             _objects.Add(obj);
         }
@@ -34,7 +35,7 @@ public class ObjectPool<T> where T : MonoBehaviour
         return obj;
     }
 
-    public void Realease(T obj)
+    public void Realease(T obj) 
     {
         obj.gameObject.SetActive(false);
     }

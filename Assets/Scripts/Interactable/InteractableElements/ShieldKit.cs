@@ -6,14 +6,4 @@ public class ShieldKit : Interactable
     {
         Debug.Log("Take shield");
     }
-
-    private void Update()
-    {
-        Move();
-    }
-
-    protected override void Move()
-    {
-        base.Move();
-    }
 }

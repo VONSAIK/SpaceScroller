@@ -6,14 +6,4 @@ public class Rock : Interactable
     {
         Debug.Log("Take damage");
     }
-
-    private void Update()
-    {
-        Move();
-    }
-
-    protected override void Move()
-    {
-        base.Move();
-    }
 }
